@@ -5,21 +5,21 @@
 class Disk < Formula
   desc "Disk is a CLI tool that helps you identify files that you can remove."
   homepage "https://github.com/sebastianappelberg/disk"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sebastianappelberg/disk/releases/download/v0.4.0/disk_Darwin_x86_64.tar.gz"
-      sha256 "2bf8597266b0cf862e0f04852ac073e6863a0d50fd021a8c43ced0dcd2a49d64"
+      url "https://github.com/sebastianappelberg/disk/releases/download/v0.5.0/disk_Darwin_x86_64.tar.gz"
+      sha256 "4134bba014b9625fe3c05d6613c69216d01bbabe352ab6d77432752c6f477d4b"
 
       define_method(:install) do
         bin.install "disk"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sebastianappelberg/disk/releases/download/v0.4.0/disk_Darwin_arm64.tar.gz"
-      sha256 "51a54218cc447e26bc90ec0ee3d480ac272479dcd8aca2a97d6dedf128f09fa3"
+      url "https://github.com/sebastianappelberg/disk/releases/download/v0.5.0/disk_Darwin_arm64.tar.gz"
+      sha256 "3a345788e247e11bfa84859d26748280b7c37fb5009d1b3b93327d515e7c7698"
 
       define_method(:install) do
         bin.install "disk"
@@ -29,15 +29,15 @@ class Disk < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sebastianappelberg/disk/releases/download/v0.4.0/disk_Linux_x86_64.tar.gz"
-      sha256 "8d4ba1f2483b701a8b7f63c1afb3ec593f1415f12a1a391840ffcc4fa40c7e60"
+      url "https://github.com/sebastianappelberg/disk/releases/download/v0.5.0/disk_Linux_x86_64.tar.gz"
+      sha256 "19f7394048591f9bbfa3c7f8a89b97cdf2dec9f2c3e70e241030d33c005d37ec"
       define_method(:install) do
         bin.install "disk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sebastianappelberg/disk/releases/download/v0.4.0/disk_Linux_arm64.tar.gz"
-      sha256 "23fa3e57023d52a8a0f70cafca0ab13869ea8d7d780fc84769dbe0228128e82f"
+      url "https://github.com/sebastianappelberg/disk/releases/download/v0.5.0/disk_Linux_arm64.tar.gz"
+      sha256 "5d1d98e1197cf4e9cb53e73ad525fffa19836cb6807269b7010ca621c7f7fc2e"
       define_method(:install) do
         bin.install "disk"
       end
